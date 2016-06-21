@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Somewhat Technical</title>
-    <link>http://replace-this-with-your-hugo-site.com/</link>
+    <link>http://archangelic.github.io/somewhattechnical/</link>
     <description>Recent content on Somewhat Technical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 21 Jun 2016 11:55:20 -0700</lastBuildDate>
-    <atom:link href="http://replace-this-with-your-hugo-site.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://archangelic.github.io/somewhattechnical/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>hello world</title>
-      <link>http://replace-this-with-your-hugo-site.com/post/hello-world/</link>
+      <link>http://archangelic.github.io/somewhattechnical/post/hello-world/</link>
       <pubDate>Tue, 21 Jun 2016 11:55:20 -0700</pubDate>
       
-      <guid>http://replace-this-with-your-hugo-site.com/post/hello-world/</guid>
+      <guid>http://archangelic.github.io/somewhattechnical/post/hello-world/</guid>
       <description>&lt;p&gt;Just testing some things out. Gotta know what things will look like when they go live.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import tweepy
