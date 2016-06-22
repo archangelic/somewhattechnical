@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Somewhat Technical</title>
-    <link>https://somewhattech.github.io/somewhattechnical/post/</link>
+    <link>https://somewhat.tech/post/</link>
     <description>Recent content in Posts on Somewhat Technical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 12 Jun 2016 18:38:21 -0700</lastBuildDate>
-    <atom:link href="https://somewhattech.github.io/somewhattechnical/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://somewhat.tech/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Tragedy</title>
-      <link>https://somewhattech.github.io/somewhattechnical/post/tragedy/</link>
+      <link>https://somewhat.tech/post/tragedy/</link>
       <pubDate>Sun, 12 Jun 2016 18:38:21 -0700</pubDate>
       
-      <guid>https://somewhattech.github.io/somewhattechnical/post/tragedy/</guid>
+      <guid>https://somewhat.tech/post/tragedy/</guid>
       <description>&lt;p&gt;I have been working on a post about how I am not out at work. It has been reminding me of how unsafe I feel in this world. This tragedy in Orlando is yet another reminder.&lt;/p&gt;
 
 &lt;p&gt;This world is not safe for me or my siblings. It seeks to destroy us. I pray for safety. I pray for change.&lt;/p&gt;
@@ -29,10 +29,10 @@
     
     <item>
       <title>PyCon 2016: Reflecting on My First Programming Conference</title>
-      <link>https://somewhattech.github.io/somewhattechnical/post/pycon-2016/</link>
+      <link>https://somewhat.tech/post/pycon-2016/</link>
       <pubDate>Sun, 05 Jun 2016 20:49:36 -0700</pubDate>
       
-      <guid>https://somewhattech.github.io/somewhattechnical/post/pycon-2016/</guid>
+      <guid>https://somewhat.tech/post/pycon-2016/</guid>
       <description>
 
 &lt;p&gt;The first time I heard about PyCon was back in 2013. A scandal had erupted around &lt;a href=&#34;http://arstechnica.com/tech-policy/2013/03/how-dongle-jokes-got-two-people-fired-and-led-to-ddos-attacks/&#34; title=&#34;Ars Technica: How “dongle” jokes got two people fired—and led to DDoS attacks&#34;&gt;a woman’s tweet&lt;/a&gt; (a sore memory, I am sure, for a lot of longtime participants of PyCon). When I heard about an opportunity to participate in the conference here in Portland, I hesitated to accept. I’m a non-binary transfeminine person, and I wondered if I would be accepted. Would I be mocked at this conference? Would I fit into a space that is dominated by cis men?&lt;/p&gt;
