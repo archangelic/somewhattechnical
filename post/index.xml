@@ -6,25 +6,60 @@
     <description>Recent content in Posts on Somewhat Technical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Jun 2016 11:55:20 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jun 2016 17:17:37 -0700</lastBuildDate>
     <atom:link href="https://archangelic.github.io/somewhattechnical/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>hello world</title>
-      <link>https://archangelic.github.io/somewhattechnical/post/hello-world/</link>
-      <pubDate>Tue, 21 Jun 2016 11:55:20 -0700</pubDate>
+      <title>PyCon 2016: Reflecting on My First Programming Conference</title>
+      <link>https://archangelic.github.io/somewhattechnical/post/pycon-2016/</link>
+      <pubDate>Tue, 21 Jun 2016 17:17:37 -0700</pubDate>
       
-      <guid>https://archangelic.github.io/somewhattechnical/post/hello-world/</guid>
-      <description>&lt;p&gt;Just testing some things out. Gotta know what things will look like when they go live.&lt;/p&gt;
+      <guid>https://archangelic.github.io/somewhattechnical/post/pycon-2016/</guid>
+      <description>
 
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import tweepy
+&lt;p&gt;by Mallory Hancock&lt;/p&gt;
 
-for each in range(1,100):
-    print(each)
+&lt;p&gt;The first time I heard about PyCon was back in 2013. A scandal had erupted around &lt;a href=&#34;http://arstechnica.com/tech-policy/2013/03/how-dongle-jokes-got-two-people-fired-and-led-to-ddos-attacks/&#34; title=&#34;Ars Technica: How “dongle” jokes got two people fired—and led to DDoS attacks&#34;&gt;a woman’s tweet&lt;/a&gt; (a sore memory, I am sure, for a lot of longtime participants of PyCon). When I heard about an opportunity to participate in the conference here in Portland, I hesitated to accept. I’m a non-binary transfeminine person, and I wondered if I would be accepted. Would I be mocked at this conference? Would I fit into a space that is dominated by cis men?&lt;/p&gt;
 
-def testthing(count=1):
-    x = str(count)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;While I am not here to argue about “donglegate” at all, the events that surrounded it did not give me great feelings about the community. I had just begun my journey into Python. I had done a couple of tutorials. After these events and what I knew about the developer community at large, I decided to never participate in community events.&lt;/p&gt;
+
+&lt;p&gt;Over time, I have seen a lot of things change, and I decided I wanted to participate. I wanted to write code and be part of what seems to be a great community, and I was given a great opportunity by Django Girls.&lt;/p&gt;
+
+&lt;h3 id=&#34;django-girls&#34;&gt;Django Girls&lt;/h3&gt;
+
+&lt;p&gt;A friend of mine brought a &lt;a href=&#34;https://djangogirls.org/pycon/&#34;&gt;link to an upcoming workshop&lt;/a&gt; to my attention. It was for a trans-friendly workshop for women to learn Django. I was beyond excited to see this event. I had been interested in learning frontend development and by this time I was thoroughly familiar with Python. So I signed up, and, to be completely honest, I am so glad I did.&lt;/p&gt;
+
+&lt;p&gt;It’s not often I feel comfortable enough to dress the way I want to. The Saturday of the tutorial however, I put on cute leggings, my favorite long skirt, and my no-shits-taken NOPE shirt. I felt so affirmed, so comfortable in my own skin.&lt;/p&gt;
+
+&lt;p&gt;The Oregon Convention Center is a long way from where I live, out on the west side of Beaverton. So, naturally I took this as my first opportunity to have an hour long &lt;a href=&#34;https://trimet.org/max/&#34;&gt;MAX&lt;/a&gt; ride wearing gender-affirming clothing. All I could think was to be constantly vigilant and suspicious of every person. My safety felt on the line as I rode with my pocket knife displayed on the shoulder strap of my bag. I was traveling through an unsafe world to a safe space.&lt;/p&gt;
+
+&lt;p&gt;I didn’t expect a lot of weirdness surrounding my name and my appearance, but it was still nice to quietly pick up my conference badge and enter the workshop.&lt;/p&gt;
+
+&lt;p&gt;This workshop was everything I could have wanted. Python (and by extension, Django) tutorials are generally the same wherever you do them; you follow a set of instructions and you make something. Django Girls Portland had done this right, though. We were in small groups with an experienced instructor. The particular guide we were following was one I had downloaded ages ago, but had put off completing for multiple reasons. So, I had my doubts that it would hold my attention this time. Encouragment got me through it though.&lt;/p&gt;
+
+&lt;p&gt;The encouragement overflowed in the space and self-congratulation was fostered. Clappers and tambourines were handed out with our swag. If you clapped your clapper, the whole room would warmly fill with other clappers. Every accomplishment was celebrated, from completing a line of code, to starting your Django project.&lt;/p&gt;
+
+&lt;p&gt;I ended up finishing the tutorial very quickly and Honza, the person mentoring my small group, showed me where I could continue learning, and gave me tools to put it into production.&lt;/p&gt;
+
+&lt;p&gt;This was one of the best experiences I have had learning to code, and, in my opinion, the best way to kick off this conference.&lt;/p&gt;
+
+&lt;h3 id=&#34;the-conference&#34;&gt;The Conference&lt;/h3&gt;
+
+&lt;p&gt;Monday was the first morning of the main conference for me. I got there early so I could have breakfast. The expo hall was enormous and filled me with anxiety. I’m a socially avoidant person in general so being in this open space made me realize how little I knew. Most of the companies were showing products that I was nowhere near ready to use. I was just beginning, how was I supposed to fit into this conference?&lt;/p&gt;
+
+&lt;p&gt;However, the opening and keynote left me feeling hopeful for how this conference would go. The flexibility to have a conference that would fit my needs was entirely possible. I could pick from the talks, open spaces, or just chill out in the hallway or the expo hall, and I did all of those things.&lt;/p&gt;
+
+&lt;p&gt;That first day was filled with so many great talks. The first one I went to was on security, a field I am highly interested in, and I was hooked from here. I was determined to get the most out of the talks.&lt;/p&gt;
+
+&lt;p&gt;The open spaces were intriguing. I had a hard time reading the board where they were written. Too many handwriting styles and there was always a crowd of people huddled around it. Twitter was the way I had to hear about a Queer &amp;amp; Trans meetup. Nothing could made me more excited than this open space. Going there was so affirming and I left with a ton of contacts in my community, as well as some new friends.&lt;/p&gt;
+
+&lt;h3 id=&#34;sum-it-up-mal&#34;&gt;“Sum it up, Mal!”&lt;/h3&gt;
+
+&lt;p&gt;I could go on and on about every talk and every little thing I did at PyCon, but I won’t. You can see all the many amazing talks on the conference &lt;a href=&#34;https://www.youtube.com/channel/UCwTD5zJbsQGJN75MwbykYNw&#34;&gt;YouTube channel&lt;/a&gt;, and I highly encourage everyone to do so.&lt;/p&gt;
+
+&lt;p&gt;This conference affirmed me as a real programmer, when I had been doubting myself as anything but a dabbler. It showed me that while I am just learning on my own, I can keep doing that and eventually do bigger and better things. I encourage anyone, whether you are just beginning with Python, or a dabbler like me, to see if you can do a tutorial and try to come to the conference. There really is a space for you, I promise!&lt;/p&gt;
+
+&lt;p&gt;I hope to go next year, and am excited that it will be in beautiful Portland, Oregon in 2017!&lt;/p&gt;
 </description>
     </item>
     
