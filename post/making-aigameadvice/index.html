@@ -4,10 +4,10 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
+  <meta name="description" content="by Mallory Hancock">
   <meta name="generator" content="Hugo 0.16" />
 
-  <title>making aigameadvice &middot; Somewhat Technical</title>
+  <title>Making @AIGameAdvice &middot; Somewhat Technical</title>
 
   
   
@@ -21,13 +21,13 @@
   <!--<![endif]-->
 
   <!--[if lte IE 8]>
-  <link rel="stylesheet" href="https://somewhattech.github.io/somewhattechnical/css/side-menu-old-ie.css">
+  <link rel="stylesheet" href="http://somewhat.tech/css/side-menu-old-ie.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://somewhattech.github.io/somewhattechnical/css/side-menu.css">
+  <link rel="stylesheet" href="http://somewhat.tech/css/side-menu.css">
   <!--<![endif]-->
 
-  <link rel="stylesheet" href="https://somewhattech.github.io/somewhattechnical/css/blackburn.css">
+  <link rel="stylesheet" href="http://somewhat.tech/css/blackburn.css">
 
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -39,12 +39,12 @@
   
 
   
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/github-gist.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/monokai.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   
 
-  <link rel="shortcut icon" href="https://somewhattech.github.io/somewhattechnical/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://somewhat.tech/img/favicon.ico" type="image/x-icon" />
 
 </head>
 
@@ -66,13 +66,13 @@
       
       
         <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://somewhattech.github.io/somewhattechnical/"><i class='fa fa-home fa-fw'></i>Home</a>
+          <a class="pure-menu-link" href="http://somewhat.tech/"><i class='fa fa-home fa-fw'></i>Home</a>
       
         </li>
       
       
         <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://somewhattech.github.io/somewhattechnical/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+          <a class="pure-menu-link" href="http://somewhat.tech/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
       
         </li>
       
@@ -165,8 +165,8 @@
 
 
 <div class="header">
-  <h1>making aigameadvice</h1>
-  <h2></h2>
+  <h1>Making @AIGameAdvice</h1>
+  <h2>by Mallory Hancock</h2>
 </div>
 <div class="content">
 
@@ -187,17 +187,134 @@
 
   
 
+<p>This past week I created a bot <a href="http://twitter.com/aigameadvice">@AIGameAdvice</a>. This was probably the easiest bot I have ever created, and I want to share the process and challenges with you. Making bots is fun, and some of the most fun about bots for me is sharing how I accomplished the bot.</p>
+
+<h2 id="you-can-build-a-bot">You can build a bot!</h2>
+
+<p>I want to just state right off the bat, that if you are new to programming, bots are an incredibly fun way to start. I have learned so much writing my own bots in Python: Pinhook (<a href="https://github.com/archangelic/pinhook">source</a>) and <a href="http://twitter.com/transferlate">@transferlate</a> (<a href="https://github.com/archangelic/transferlate">source</a>). Admittedly, those projects were me biting off more than I could chew, so I suggest starting off smaller, like <a href="https://tpinecone.gitbooks.io/build-a-bot-workshop/content/">this guide</a>.</p>
+
+<p>I guarantee you will learn a lot about programming basics, and you will get to see the results nearly right away, which is my favorite part!</p>
+
+<p>Anyway, on to my new bot!</p>
+
+<h2 id="the-idea">The Idea</h2>
+
+<p>My initial thought was that I wanted to create something that generated random sentences. Markov chains can be an incredibly fun way to do this. They tend to stay pretty neat in a tweet-sized sentence. All I needed now was something to build them from.</p>
+
+<p>I spent a lot of my youth playing video games and following guides on GameFAQs. These are massive raw text files, which makes them perfect for building Markov chains.</p>
+
+<p>So I decided to make a bot that tells you how to play popular games (all at once)!</p>
+
+<h2 id="building-the-bot">Building the Bot</h2>
+
+<p>This is where I get a bit technical, just so you know. Also, I&rsquo;m not a professional programmer. I do this for fun, and I might do things completely wrong, but they work for me. If you have constructive feedback, I&rsquo;m always happy to hear it!</p>
+
+<p>So, I&rsquo;m a Python programmer, so the tools I decided to use for the bot were <a href="https://github.com/tweepy/tweepy">tweepy</a> to send the tweet I made and <a href="https://github.com/jsvine/markovify">markovify</a> to build the tweet.</p>
+
+<pre><code>$ pip install tweepy markovify
+</code></pre>
+
+<h3 id="the-corpus">The Corpus</h3>
+
+<p>In order to use markovify, you have to have a file of all the text. So I had to write something that would scrape GameFAQs and get a sampling of guides for some top games. I was initially just going to use the standard urllib to get the link and then use beautifulsoup to scrape it. Something about the urllib call caused GameFAQs to only return Forbidden responses</p>
+
+<p>Another tool I had heard to use for a project like this was <a href="http://wwwsearch.sourceforge.net/mechanize/">mechanize</a>, but it is not compatible with Python 3. This was definitely a problem for me, since I committed only to writing in Python 3 unless I only had access to Python 2 environment.</p>
+
+<p>So I went out on a search, and found a Stack Overflow qustion from someone who had the same issues I had. <a href="http://stackoverflow.com/a/24001585">Someone in there created a python package</a> called <a href="https://github.com/hickford/MechanicalSoup">mechanicalsoup</a>. It&rsquo;s a neat little package that wraps requests in the same syntax as mechanize and also contains a soupified version of the page when you make a request.</p>
+
+<p>So with that I was ready to try and grab the links of the top ranked games on GameFAQs:</p>
+
+<pre><code class="language-python">import mechanicalsoup
+
+# create a browser to pull information with
+br = mechanicalsoup.Browser()
+# Get the response
+response = br.get('http://www.gamefaqs.com/games/rankings')
+</code></pre>
+
+<p>Now, response has a soup item attached to it of the html I just gathered.</p>
+
+<pre><code class="language-python">&gt;&gt;&gt; print(response.soup)
+&lt;!DOCTYPE html&gt;
+&lt;html itemscope=&quot;&quot; lang=&quot;en&quot;&gt;&lt;head&gt;&lt;title&gt;Rankings - GameFAQs&lt;/title&gt;
+...
+</code></pre>
+
+<p>Getting all the links is easy once you have the soup.</p>
+
+<pre><code class="language-python">&gt;&gt;&gt; links = response.soup.find_all('a')
+&gt;&gt;&gt; for link in links:
+...     print(link.get('href'))
+...
+/3ds
+/ds
+/iphone
+/pc
+/ps3
+/ps4
+/psp
+/vita
+/wii-u
+/xbox360
+/xboxone
+</code></pre>
+
+<p>That code dumps all the relative links on the page. Now looking at this, I noticed the ones that actually link to the games are structured as <code>/&lt;system code&gt;/&lt;game_id_number&gt;-&lt;name&gt;</code> such as <code>/snes/563538-chrono-trigger</code>, so in order to gather only the links to the games, I needed to know all the system codes that GameFAQs uses.</p>
+
+<p>Luckily for me they are the first 27 in the list that soup created of the links (along with some other links that were easily removed because they started with &ldquo;/games&rdquo;). So I pass those into a list with a trailing &ldquo;/&rdquo; for the next step.</p>
+
+<pre><code class="language-python">systems = []
+for i in response.soup.find_all('a')[:26]:
+    ref = i.get('href')
+    if not ref.startswith('/games'):
+        systems.append(i.get('href') + '/')
+</code></pre>
+
+<p>Now what I needed to do is find all the links for the actual games.</p>
+
+<pre><code class="language-python">systems = tuple(systems)
+topGames = []
+
+for each in response.soup.find_all('a'):
+    ref = str(each.get('href'))
+        if ref.startswith(systems):
+            topGames.append(&quot;http://www.gamefaqs.com&quot; + ref + &quot;/faqs&quot;)
+</code></pre>
+
+<p>Awesome, so I have a list of the top 50 games on GameFAQs, and I used the for statement to go ahead and transform their links to point to the list of guides.</p>
+
+<p>Now I need to gather the guides.</p>
+
+<pre><code class="language-python">guides = []
+for link in topGames:
+    resp = br.get(link)
+    faq = []
+    for each in resp.soup.find_all('a'):
+        if '/faqs/' in str(each.get('href')):
+            faq.append(&quot;http://www.gamefaqs.com&quot; + each.get('href'))
+    try:
+        for each in faq[:8]:
+            guides.append(each)
+    except:
+        pass
+</code></pre>
+
+<p>So I found all the guides listed there by finding all the links starting with <code>/faqs/</code>. I chose to pick only the top 8 guides from each game because there are some international guides after that point, and I want to keep the bot speaking only English so I know what it is saying.</p>
+
+<p>With the links to the guides, I have exactly what I wanted, and all I have to do is to write it to <code>corpus.txt</code> so that markovify can do its magic later on.</p>
+
+
   
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="https://somewhattech.github.io/somewhattechnical/post/tragedy/"><i class="fa fa-chevron-left"></i></a>
+    <a href="http://somewhat.tech/post/tragedy/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="https://somewhattech.github.io/somewhattechnical/post/tragedy/">Tragedy</a>
+      <a href="http://somewhat.tech/post/tragedy/">Tragedy</a>
     </nav>
     
   </div>
@@ -206,8 +323,14 @@
   </div>
   <div class="pure-u-10-24">
     
+    <nav class="next">
+      <a href="http://somewhat.tech/post/i-am-not-out/">I&#39;m Not &#34;Out&#34; at Work</a>
+    </nav>
+    
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="http://somewhat.tech/post/i-am-not-out/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>
@@ -238,7 +361,7 @@
 
 </div>
 </div>
-<script src="https://somewhattech.github.io/somewhattechnical/js/ui.js"></script>
+<script src="http://somewhat.tech/js/ui.js"></script>
 
 
 
