@@ -6,8 +6,18 @@
     <description>Recent content on Somewhat Technical</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Jun 2016 13:26:35 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jun 2016 12:02:34 -0700</lastBuildDate>
     <atom:link href="http://somewhat.tech/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>test</title>
+      <link>http://somewhat.tech/post/test/</link>
+      <pubDate>Mon, 27 Jun 2016 12:02:34 -0700</pubDate>
+      
+      <guid>http://somewhat.tech/post/test/</guid>
+      <description>&lt;p&gt;This is a test&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>I&#39;m Not &#34;Out&#34; at Work</title>
